@@ -18,7 +18,7 @@ public:
 
 	void add(T);
 	bool find(T);
-	//void removeChilds();
+	void removeChilds();
 	void ancestors(std::stringstream&, T) const;
 	void inorder(std::stringstream&) const;
 	void preorder(std::stringstream&) const;
@@ -65,9 +65,7 @@ bool TreeNode<T>::find(T val) {
 	return false;
 }
 
-/*
 template <class T>
-
 void TreeNode<T>::removeChilds() {
 	if (left != 0) {
 		left->removeChilds();
@@ -80,7 +78,6 @@ void TreeNode<T>::removeChilds() {
 		right = 0;
 	}
 }
-*/
 
 template <class T>
 void TreeNode<T>::ancestors(std::stringstream &aux, T val) const {
@@ -185,12 +182,11 @@ public:
 template <class T>
 BST<T>::BST() : root(0) {}
 
-/*
 template <class T>
 BST<T>::~BST() {
 	removeAll();
 }
-*/
+
 template <class T>
 void BST<T>::removeAll() {
 	if (root != 0) {
